@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddTodo = ({ addTodo }) => {
   const [title, setTitle] = useState('');
@@ -26,4 +27,8 @@ export const AddTodo = ({ addTodo }) => {
       <input type='submit' value='Submit' className='btn' style={{ flex: 1 }} />
     </form>
   );
+};
+
+AddTodo.propTypes = {
+  addTodo: PropTypes.func.isRequired
 };
